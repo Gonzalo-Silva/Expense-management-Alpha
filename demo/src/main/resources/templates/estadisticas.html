@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Estadísticas | Poq</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" th:href="@{/Imagenes/logo_pestana.png}" />
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+    <link rel="stylesheet" th:href="@{/css/estadisticas.css}" />
+    <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div th:replace="fragmento-navbar :: navbar"></div>
+    <div class="contenido">
+        <div class="busqueda">
+            <h2 class="titulo" style="background-color: #5fc463;">INGRESAR PERÍODO DE BÚSQUEDA</h2>
+            <span></span>
+            <div class="fechas">
+                <form th:action="@{/estadisticas}">
+                    <li>
+                        <label class="texto" for="inicio">Fecha de inicio:</label>
+                        <input class="ingreso-fechas" type="date" id="start" value="" name="desde" min="2000-01-01"
+                            max="2050-12-31" />
+                    </li>
+                    <span></span>
+                    <li>
+                        <label class="texto" for="fin">Fecha de fin:</label>
+                        <input class="ingreso-fechas" type="date" id="end" value="" name="hasta" min="2000-01-01"
+                            max="2050-12-31" />
+                    </li>
+                    <span></span>
+                    <button class="crear" type="submit">Buscar</button>
+
+
+
+                </form>
+            </div>
+        </div>
+        <span></span>
+        <span></span>
+
+        <div class="busqueda">
+            <h2 class="titulo" style="background-color: #5fc463;">RESULTADOS</h2>
+            <span></span>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Ingresos</th>
+                        <th>Egresos</th>
+                        <th>Resultados</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td th:text="${ingresos}"></td>
+                        <td th:text="${egresos}"></td>
+                        <td th:text="${resultadosGlobales}"></td>
+                    </tr>
+                </tbody>
+                <span></span>
+            </table>
+        </div>
+        <span></span>
+        <div class="categorias">
+            <div class="left">
+                <h2 class="titulo" style="background-color: #5fc463;">INGRESOS POR CATEGORÍA</h2>
+                <span></span>
+                <div>
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Ingresos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="ingreso: ${ingresosCategoria}">
+                                <td th:text="${ingreso.categoria.nombre}"></td>
+                                <td th:text="${ingreso.monto}"></td>
+                            </tr>
+
+                            <tr>
+                                <td th:text="|Total|"></td>
+                                <td th:text="${ingresos}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="right">
+                <h2 class="titulo" style="background-color: #5fc463;">EGRESOS POR CATEGORÍA</h2>
+                <span></span>
+                <div>
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Egresos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="egreso: ${egresosCategoria}">
+                                <td th:text="${egreso.categoria.nombre}"></td>
+                                <td th:text="${egreso.monto}"></td>
+                            </tr>
+
+                            <tr>
+                                <td th:text="|Total|"></td>
+                                <td th:text="${egresos}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <span></span>
+        <a class="volver" th:href="@{/control}">Volver</a>
+        <span></span>
+    </div>
+    <script th:src="@{/javaScript/navbar.js}"></script>
+</body>
+
+</html>

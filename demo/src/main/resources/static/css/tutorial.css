@@ -1,0 +1,26 @@
+.posicion {
+  background-color: none;
+  margin: 0px;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cajas {
+  width: 100%;
+  background-color: none;
+  align-content: center;
+  display: flex;
+  padding: 10px;
+}
+.img-tutorial {
+  width: 30%;
+  margin: auto;
+}
+.mobile img{
+  margin: 10px 0px;
+  width: 100%;
+  height: 100%;
+}

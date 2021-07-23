@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-ES" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Poq | Home</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" th:href="@{/Imagenes/logo_pestana.png}" />
+  <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+  <link rel="stylesheet" th:href="@{/css/Home.css}" />
+  <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+  <link rel="stylesheet" th:href="@{/css/slider.css}" />
+  <link rel="stylesheet" th:href="@{/css/tutorial.css}" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div th:replace="fragmento-navbar :: navbar"></div>
+  <div th:replace="fragmento-slider :: slider"></div>
+  <div th:replace="fragmento-tutorial :: tutorial"></div>
+  <script th:src="@{/javaScript/main.js}"></script>
+  <script th:src="@{/javaScript/navbar.js}"></script>
+</body>
+
+</html>

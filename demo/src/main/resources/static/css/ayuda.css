@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url("/Imagenes/ingresos-fondo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contenido {
+  background-color: none;
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 15px;
+  font-family: "Rubik", sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 0;
+  font-size: calc(1em + 1vw);
+  text-align: center;
+}
+span {
+  width: 100%;
+  margin: 10px;
+}
+
+.titulo {
+  top: 20px;
+  margin: auto;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #72cb75;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+.intro {
+  padding: 5px;
+  font-size: 20px;
+  color: #0e0e0e;
+  text-align: center;
+  margin: 10px;
+  background-color: #72cb75;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.contenido ul {
+  margin: 20px;
+  padding: 10px;
+  background-color: #72cb75;
+  border-radius: 10px;
+}
+
+.contenido li {
+  flex-wrap: wrap;
+  list-style: none;
+}
+.contenido li h3 {
+  font-size: 20px;
+  padding-left: 3px;
+  color: #ffffff;
+  font-weight: 0;
+}
+.contenido li p {
+  background-color: #ffffff;
+  align-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 3px;
+  color: #0e0e0e;
+}
+
+.logo-form {
+  margin: auto;
+  width: 150px;
+  height: auto;
+  justify-content: right;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: #72cb75;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-ES" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Iniciar Sesión | Poq</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" th:href="@{/Imagenes/logo_pestana.png}" />
+  <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+  <link rel="stylesheet" th:href="@{/css/Login.css}" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="contenido">
+    <form class="orden" th:action="@{/login}" method="post">
+      <a th:href="@{/}">
+        <img th:src="@{/Imagenes/imagotipo_vertical.png}" alt="logo" class="logo-form" />
+      </a>
+
+
+      <ul>
+        <li class="espacios">
+          <input type="text" name="username" class="placeholder" placeholder="Email" required />
+        </li>
+        <span></span>
+        <li class="espacios">
+          <input type="password" name="password" class="placeholder" placeholder="Contraseña" required />
+        </li>
+        <span></span>
+        <div class="Recordar">
+          <input class="recordarme" name="remember-me" type="checkbox" />
+          <label for="remember_me" class="inline">Recordar contraseña</label>
+        </div>
+        <span></span>
+        <input class="crear" type="submit" value="Enviar" th:href="@{/Home}" />
+        <span></span>
+        <li style="list-style: none;">
+          <a class="Registro" th:href="@{/usuario/crear-usuario}">Si no tiene una cuenta. Regístrese.</a>
+        </li>
+        <a th:href="@{/ayuda}"><img th:src="@{/Imagenes/boton_ayuda_blanco.png}" class="ayuda-form"
+            alt="Ayuda Logo" /></a>
+      </ul>
+
+
+
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

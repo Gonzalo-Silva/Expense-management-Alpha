@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url("/Imagenes/imagen_ingresos.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contenido {
+  background-color: none;
+  width: 95%;
+  height: auto;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-radius: 15px;
+  font-family: "Rubik", sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  text-align: center;
+}
+span {
+  width: 100%;
+  height: 10px;
+}
+
+.titulo {
+  margin: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #72cb75;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tabla {
+  background-color:none;
+  width: 100%;
+}
+table {
+  justify-content: left;
+  border-radius: 5px;
+  vertical-align: middle;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 2px;
+  width: 90%;
+  border: #0d0d0d;
+  background-color: #72cb75;
+}
+tr {
+  border: 1px #0d0d0d;
+}
+th,
+td {
+  padding: 2px;
+  background-color: #ffffff;
+  color: #0d0d0d;
+  text-align: center;
+  font-size: calc(0.6em + 0.6vw);
+  flex-wrap: wrap;
+  border-color: #0d0d0d;
+  border-radius: 3px;
+  width: auto;
+}
+
+.crear {
+  color: #ffffff;
+  background-color: #72cb75;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: calc(1em + 1vw);
+}
+.crear:hover{
+  color: #ffffff;
+  background-color: #5fc463;
+}
+.contenido form {  
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Rubik", sans-serif;
+  justify-content: space-between;
+  text-align: center;
+  background-color: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+input, select {
+  padding: 3px;
+  border-radius: 10px;
+  width: 300px;
+  border-color: #b1b1b1;
+  border: none;
+  margin: 5px;
+}
+td a{
+  background-color: #b1b1b1;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 3px;
+}
+td form button{
+  background-color: #c45252;
+  color: #ffffff;
+  border-radius: 3px;
+  text-decoration: none;
+  border-style: none;
+}
+.busqueda{
+  width: 100%;
+  height: 30%;
+  background-color: #72cb75;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.fechas{
+  justify-content: center;
+  margin: 10px;
+  
+}
+.texto{
+  font-size: 16px;
+  color: #ffffff;
+}
+.ingreso-fechas{
+  padding: 5px;
+  outline: none;
+  width: 30%;
+  margin: auto;
+}

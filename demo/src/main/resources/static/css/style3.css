@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+contenido {
+  margin-top: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20%;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logo-form {
+  object-fit: cover;
+  flex-wrap: wrap;
+  width: 290px;
+  height: auto;
+  cursor: pointer;
+  background: none;
+  text-align: left;
+}
+.ayuda-form{
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: right;
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  background: none;
+  text-align: left;
+  padding: 10px;
+}
+span{
+    width: 100%;
+    margin: 5px;
+}
+form {
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+  width: 80%;
+  flex-wrap: wrap;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: rgb(255, 254, 254);
+  border-radius: 5px;
+  border: 3px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  
+}
+
+form ul{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.espacios {
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  margin: 5px;
+  color: rgb(0, 0, 0);
+}
+.espacios ::placeholder{
+  background-color:#ffffff ;
+  color: rgb(0, 0, 0);
+  
+  
+}
+.placeholders{
+  width: 200px;
+  padding: 5px;
+  border-radius: 15px;
+  
+
+}
+
+.titulo{
+  text-align: left;
+  font-size: 30px;
+}
+.enviar {
+  border-style: none;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+ 
+  
+}
+.boton{
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  background-color: #72cb75;
+  border: none;
+}
+.boton:hover{
+  background-color: rgb(25, 124, 91);
+}
+
+.iniciar-s{
+  color: black;
+  text-decoration: underline;
+  text-align: right;
+  justify-content: right;
+
+}

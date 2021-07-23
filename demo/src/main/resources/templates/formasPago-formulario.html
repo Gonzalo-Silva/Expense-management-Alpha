@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Crear Pago | Poq</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" th:href="@{/Imagenes/logo_pestana.png}" />
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+    <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+    <link rel="stylesheet" th:href="@{/css/registro-datos.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div th:replace="fragmento-navbar :: navbar"></div>
+    <div class="contenido">
+        <h2 class="titulo">CREAR PAGO</h2>
+        <span></span>
+        <form class="regis"  id="formulario" th:action="@{/formasPagos/__${action}__}" method="POST" th:object="${formasPago}"
+            autocomplete="off" novalidate>
+            <ul>
+                <input type="text" id="tipo" th:field="*{tipo}" placeholder="Tipo" name="tipo" required />
+                <input hidden id="idPago" type="text" placeholder="idPago" th:field="*{idPago}" required
+                    th:readonly="${formasPago.idPago != null}" />
+            </ul>
+            <button class="crear" type="submit" th:text="${action == 'guardar'} ? 'Crear forma de pago' : 'Guardar cambios'"></button>
+            <a class="cancelar" th:href="@{/egresos}">Cancelar</a>
+        </form>
+
+    </div>
+
+    <script th:src="@{/javaScript/navbar.js}"></script>
+</body>
+
+</html>

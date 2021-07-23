@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-ES" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control</title>
+    <link rel="shortcut icon" type="image/png" th:href="@{/Imagenes/logo_pestana.png}" />
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+    <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+    <link rel="stylesheet" th:href="@{/css/style2.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div th:replace="fragmento-navbar :: navbar"></div>
+
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <a th:href="@{/ingresos}">
+                        <img th:src="@{/Imagenes/boton_ingresos.png}">
+                    </a>
+                    <h3>INGRESO</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Crea, modifíca y observa tus ingresos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <a th:href="@{/egresos}">
+                        <img th:src="@{/Imagenes/boton_egresos.png}">
+                    </a>
+
+                    <h3>EGRESO</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Aquí tienes los datos de tus egresos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <a th:href="@{/estadisticas}">
+                        <img th:src="@{/Imagenes/boton_estadisticas.png}">
+                    </a>
+                    <h3>ESTADÍSTICA</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Obtén informacion de tu negocio con graficos intuitívos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script th:src="@{/javaScript/navbar.js}"></script>
+</body>
+
+</html>

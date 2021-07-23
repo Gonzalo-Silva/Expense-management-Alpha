@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-ES" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="navbar">
+  <header>
+    <nav>
+      <div class="logo">
+        <a th:href="@{/Home}"><img th:src="@{/Imagenes/imagotipo_horizontal.png}" class="logo" alt="Main Logo" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a th:href="@{/control}">Mi Caja</a></li>
+        <li><a th:href="@{/categorias}">Categorias</a></li>
+        <li><a th:href="@{/formasPagos}">Formas/Pago</a></li>
+        <li><a th:href="@{/ayuda}">Ayuda</a></li>
+        <li>
+          <form id="cerrar" th:action="@{/login(logout)}" method="post">
+            <a href="javascript:{}" onclick="document.getElementById('cerrar').submit();">Cerrar Sesión</a>
+          </form>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+</html>

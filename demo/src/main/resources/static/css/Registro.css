@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.contenido {
+  margin-top: 80px;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.logo-form {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+.ayuda-form {
+  margin: 20px auto;
+  flex-wrap: wrap;
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  background: none;
+}
+span {
+  width: 100%;
+  margin: 5px;
+}
+form {
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+  text-align: center;
+}
+
+.espacios {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  margin: auto;
+  color: rgb(0, 0, 0);
+}
+.espacios ::placeholder {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.placeholders {
+  width: 60%;
+  padding: 5px;
+  border-radius: 15px;
+  outline: none;
+  border-style: 1px solid;
+}
+
+.titulo {
+  text-align: left;
+  font-size: 30px;
+}
+.enviar {
+  border-style: none;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+}
+.boton {
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  background-color: #72cb75;
+  border: none;
+}
+.boton:hover {
+  background-color: rgb(25, 124, 91);
+}
+
+.iniciar-s {
+  color: black;
+  text-decoration: underline;
+  text-align: right;
+  justify-content: right;
+}
+.crear {
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #72cb75;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.crear:hover {
+  color: #ffffff;
+  background-color: #5fc463;
+}

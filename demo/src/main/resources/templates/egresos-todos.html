@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Egresos</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" th:href="@{/Imagenes/logo_pestana.png}" />
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+    <link rel="stylesheet" th:href="@{/css/formato-datos.css}" />
+    <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div th:replace="fragmento-navbar :: navbar"></div>
+    <div class="contenido">
+        <h2 class="titulo">LISTA DE EGRESOS</h2>
+        <span></span>
+        <a class="crear" th:href="@{/egresos/crear}">Crear</a>
+        <span></span>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Descripcion</th>
+                    <th>Monto</th>
+                    <th>Nota</th>
+                    <th>Categoría</th>
+                    <th>Forma de pago</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="egreso: ${egresos} ">
+                    <td th:text="${egreso.id}"></td>
+                    <td th:text="${egreso.fecha}"></td>
+                    <td th:text="${egreso.descripcion}"></td>
+                    <td th:text="${egreso.monto}"></td>
+                    <td th:text="${egreso.nota}"></td>
+                    <td th:text="|${egreso.categoria.nombre}|"></td>
+                    <td th:text="|${egreso.formasPago.tipo}|"></td>
+                    <td>
+                        <a th:href="@{/egresos/editar/__${egreso.id}__}">Editar</a>
+                        <form th:action="@{/egresos/eliminar/__${egreso.id}__}" method="post">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="crear" th:href="@{/control}">Volver</a>
+    </div>
+
+    <script th:src="@{/javaScript/navbar.js}"></script>
+</body>
+
+</html>

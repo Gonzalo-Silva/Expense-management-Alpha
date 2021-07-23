@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-ES" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="navbarIndex">
+  <nav>
+    <div class="logo">
+      <a th:href="@{/}"><img th:src="@{/Imagenes/imagotipo_horizontal.png}" class="logo" alt="Main Logo" /></a>
+    </div>
+    <ul class="nav-links">
+      <li><a th:href="@{/login}">Iniciar Sesión</a></li>
+      <li><a th:href="@{/usuario/crear-usuario}">Registrarse</a></li>
+      <li><a th:href="@{/ayuda}">Ayuda</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+</div>
+
+</html>

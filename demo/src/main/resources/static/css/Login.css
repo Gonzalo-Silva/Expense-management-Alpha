@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-image: url("/Imagenes/imagen_log-in.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contenido {
+  margin-top: 100px;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.orden {
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.logo-form {
+  margin: auto;
+  width: 150px;
+  height: auto;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+span {
+  width: 100%;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.contenido form {
+  margin: auto;
+  flex-wrap: wrap;
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+  text-align: center;
+}
+.ayuda-form {
+  margin: 20px auto;
+  flex-wrap: wrap;
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}
+.enviar {
+  border-style: none;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.enviar-form {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  background: none;
+  text-align: left;
+  padding: 10px;
+}
+
+input {
+  border-radius: 15px;
+  outline: none;
+  flex-wrap: wrap;
+}
+
+.espacios {
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  color: rgb(0, 0, 0);
+  flex-wrap: wrap;
+}
+.placeholder {
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 5px;
+  border: none;
+  flex-wrap: wrap;
+}
+
+.Registro {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-align: right;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.crear {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: #ffffff;
+  background-color: #72cb75;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  flex-wrap: wrap;
+}
+.crear:hover {
+  color: #ffffff;
+  background-color: #5fc463;
+}
+.Recordar{
+  justify-content: center;  
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+
+.crear {
+  color: #ffffff;
+  background-color: #72cb75;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
