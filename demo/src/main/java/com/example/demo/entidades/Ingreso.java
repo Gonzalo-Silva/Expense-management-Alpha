@@ -25,7 +25,7 @@ public class Ingreso {
 
     @Column
     private Long monto;
-    
+
     @Column
     private String nota;
 
@@ -97,8 +97,10 @@ public class Ingreso {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Ingreso ingreso = (Ingreso) o;
         return id.equals(ingreso.id);
     }
@@ -108,5 +110,4 @@ public class Ingreso {
         return Objects.hash(id);
     }
 
-    
 }

@@ -21,24 +21,25 @@ public class UsuarioServicio implements UserDetailsService {
     @Autowired
     private UsuarioRepositorio usuarioRepositorio;
 
-   @Autowired (required=true) //Declarar atributo "BCrypt" para encriptar
-   private BCryptPasswordEncoder encoder;
+    @Autowired(required = true) // Declarar atributo "BCrypt" para encriptar
+    private BCryptPasswordEncoder encoder;
 
     @Transactional
-    public void crear(String nombre, String apellido, Long dni, String mail, String contrasena){
+    public void crear(String nombre, String apellido, Long dni, String mail, String contrasena) {
         Usuario u = new Usuario();
 
         u.setNombre(nombre);
         u.setApellido(apellido);
         u.setDni(dni);
         u.setMail(mail);
-        u.setContrasena(encoder.encode(contrasena));  //encriptar
-       // u.setContrasena(contrasena);
+        u.setContrasena(encoder.encode(contrasena)); // encriptar
+        // u.setContrasena(contrasena);
         usuarioRepositorio.save(u);
-        
+
     }
-    public void IniciarSesion(String mail, String contrasena ) throws Exception {
-        //Validar(mail, contrasena);
+
+    public void IniciarSesion(String mail, String contrasena) throws Exception {
+        // Validar(mail, contrasena);
 
         Usuario u = new Usuario();
 
@@ -47,57 +48,55 @@ public class UsuarioServicio implements UserDetailsService {
 
         usuarioRepositorio.save(u);
 
-
     }
+
     public void Modificar(Long id, String mail, String contrasena) throws Exception {
-       // Validar( mail, contrasena);
+        // Validar( mail, contrasena);
         Optional<Usuario> request = usuarioRepositorio.findById(id);
-        if(request.isPresent()){
-        Usuario u = request.get();
+        if (request.isPresent()) {
+            Usuario u = request.get();
 
-        u.setMail(mail);
+            u.setMail(mail);
 
-        usuarioRepositorio.save(u);
-        }else{
+            usuarioRepositorio.save(u);
+        } else {
             throw new Exception("No se encontró el usuario solicitado.");
         }
     }
 
-   public void Eliminar(Long id) throws Exception{
+    public void Eliminar(Long id) throws Exception {
         Optional<Usuario> request = usuarioRepositorio.findById(id);
-        if(request.isPresent()){
-        Usuario u = request.get();
-        u.setBaja(new Date());;
+        if (request.isPresent()) {
+            Usuario u = request.get();
+            u.setBaja(new Date());
+            ;
 
-        usuarioRepositorio.save(u);
-        }else{
-            throw new Exception ("No se encontró el usuario solicitado.");
+            usuarioRepositorio.save(u);
+        } else {
+            throw new Exception("No se encontró el usuario solicitado.");
         }
     }
 
+    public void Validar(String mail, String contrasena) throws Exception {
 
-
-    public void Validar( String mail, String contrasena ) throws Exception{
-
-        if(mail==null || mail.isEmpty()){
+        if (mail == null || mail.isEmpty()) {
             throw new Exception("El e-mail del usuario no puede ser nulo.");
         }
-        if(contrasena==null || contrasena.isEmpty() || contrasena.length() <= 8){
+        if (contrasena == null || contrasena.isEmpty() || contrasena.length() <= 8) {
             throw new Exception("La contraseña del usuario no puede ser nula o mayor de 8 dígitos.");
         }
     }
+
     @Override
-    public UserDetails loadUserByUsername(String mail) throws UsernameNotFoundException{
+    public UserDetails loadUserByUsername(String mail) throws UsernameNotFoundException {
         Usuario usuario = usuarioRepositorio.buscarPorNombreDeUsuario(mail);
-        if(usuario == null){
+        if (usuario == null) {
             throw new UsernameNotFoundException("No hay ningun usuario con username" + mail);
 
         }
 
         return new org.springframework.security.core.userdetails.User(usuario.getMail(), usuario.getContrasena(),
-         Collections.emptyList());
+                Collections.emptyList());
     }
 
 }
-
-
