@@ -81,9 +81,4 @@ public class Categoria implements Serializable {
         return "Categoria [egresos=" + egresos + ", idCat=" + idCat + ", ingresos=" + ingresos + ", nombre=" + nombre
                 + "]";
     }
-
-    
-    
-
-    
 }
